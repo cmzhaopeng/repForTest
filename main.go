@@ -48,11 +48,13 @@ func main() {
 
 		nodes := strings.Split(path, ", ")
 
-		for _, node := range nodes {
-			fmt.Println("  Node:", node)
-		}
+		/*	for _, node := range nodes {
+				fmt.Println("  Node:", node)
+			}
+		*/
+		fmt.Println(nodes[0], nodes[1], nodes[2], nodes[3])
 
-		fmt.Println("  Path:", path)
+		//		fmt.Println("  Path:", path)
 	}
 
 	// Print middle node paths (using map access)
