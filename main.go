@@ -16,7 +16,7 @@ type WorkflowConfig struct {
 
 func main() {
 	// Set configuration file and type
-	viper.SetConfigFile("config.yaml")
+	viper.SetConfigFile("myflow.yaml")
 	viper.SetConfigType("yaml")
 
 	// Read the configuration

@@ -1,7 +1,3 @@
-name: "myflow"
-startNode: "startNode"
-middleNode: 
-  - "middleNode1, middleNode2, middleNode1, middleNode2"
-  - "middleNode2, middleNode3, middleNode2, endNode"
-  - "middleNode3, endNode, middleNode2, endNode"
-endNode: "endNode"
+workflows:
+  - "myflow.yaml"
+  - "secondFlow.yaml"
