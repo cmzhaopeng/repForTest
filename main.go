@@ -40,19 +40,25 @@ func main() {
 	fmt.Println("End Node:", config.EndNode)
 	fmt.Println("Middle Node:", config.MiddleNode)
 
+	StartNode := strings.Split(config.StartNode, " | ")
+	fmt.Printf("Start Node Name: %s  NodeNextUser org: %s NodeNextUserRoles: %s \n ", StartNode[0], StartNode[1], StartNode[2])
+
 	// print the middleNode string
 
 	for _, path := range config.MiddleNode {
 
 		//split the path with ","  just as "node1, node2, node3, node4"split the patht ever","  jus
 
-		nodes := strings.Split(path, ", ")
+		nodes := strings.Split(path, " | ")
+
+		fmt.Printf("Node Name: %s  NodeNextUser org: %s NodeNextUserRoles: %s \n ", nodes[0], nodes[1], nodes[2])
 
 		/*	for _, node := range nodes {
 				fmt.Println("  Node:", node)
 			}
 		*/
-		fmt.Println(nodes[0], nodes[1], nodes[2], nodes[3])
+		nodeName := strings.Split(nodes[0], ",")
+		fmt.Printf("currentNodeName: %s nextNodeName: %s preNodeName: %s jumpNodeName: %s \n", nodeName[0], nodeName[1], nodeName[2], nodeName[3])
 
 		//		fmt.Println("  Path:", path)
 	}

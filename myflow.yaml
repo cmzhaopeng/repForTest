@@ -1,7 +1,9 @@
 name: "myflow"
-startNode: "startNode"
+# startNodeName | nextUserOrg | nextUserRoles
+startNode: "startNode | self | manager"
 middleNode: 
-  - "middleNode1, middleNode2, middleNode1, middleNode2"
-  - "middleNode2, middleNode3, middleNode2, endNode"
-  - "middleNode3, endNode, middleNode2, endNode"
+#currentNodeName, nextNodeName, preNodeName, jumpNodeName | nextUserOrg | nextUserRoles 
+  - "middleNode1, middleNode2, middleNode1, middleNode2 | all | user"
+  - "middleNode2, middleNode3, middleNode2, endNode | IT, HR, Office | NS_GROUP, BS_GROUP"
+  - "middleNode3, endNode, middleNode2, endNode | IT | Operator"
 endNode: "endNode"
