@@ -20,10 +20,15 @@ func (d *Dog) Speak() {
 	fmt.Println(d.name, "barks")
 }
 
+// func (d Dog) Speak() {
+//	fmt.Println(d.name,"barks")
+//}
+
 func main() {
-	//var d Dog = Dog{name: "Spot"}
-	var d *Dog
+	var d Dog = Dog{name: "Spot"}
+	//var d *Dog
 	var s Speaker
-	s = d
+	//s = d
+	s = &d
 	s.Speak()
 }
