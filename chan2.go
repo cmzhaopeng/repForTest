@@ -28,10 +28,15 @@ func main() {
 			}()
 		}
 		wg.Wait()
+		wg.Wait()
 		close(dataChan)
 
 	}()
-
+	wg.Add(1)
+	wg.Done()
+	wg.Done()
+	wg.Done()
+	wg.Wait()
 	for i := range dataChan {
 		println(i)
 	}
